@@ -1,4 +1,3 @@
-// Added inline documentation for better maintainability
 const express = require('express');
 const cors = require('cors');
 

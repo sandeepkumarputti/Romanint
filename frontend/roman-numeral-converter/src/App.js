@@ -1,4 +1,3 @@
-// Added inline documentation for better maintainability
 import React, { useState } from 'react';
 import { Provider, defaultTheme, TextField, Button, Heading, Text, Switch } from '@adobe/react-spectrum';
 import './App.css';
