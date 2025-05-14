@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./backend:/usr/src/app
+      - /usr/src/app/node_modules
+
+    environment:
+      - NODE_ENV=production
+
+  frontend:
+    build:
+      context: ./frontend/roman-numeral-converter
+    ports:
+      - "3000:80"
+    volumes:
+      - ./frontend/roman-numeral-converter:/usr/src/app
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      - backend
